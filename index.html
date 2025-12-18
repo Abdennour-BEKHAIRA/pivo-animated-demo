@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Impressive Animated PivoCloud App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.0/dist/gsap.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Floating Header -->
+        <header class="floating-header">
+            <h1><i class="fas fa-magic"></i> PivoCloud Animated Showcase</h1>
+            <p class="subtitle">Real-time animations powered by Three.js & GSAP</p>
+        </header>
+        
+        <!-- Interactive Cards -->
+        <div class="cards-grid">
+            <div class="card" id="card1">
+                <div class="card-icon"><i class="fas fa-cube"></i></div>
+                <h2>3D Transformations</h2>
+                <p>Hover to rotate 3D elements with smooth transitions</p>
+                <div class="cube" id="cube1"></div>
+            </div>
+            
+            <div class="card" id="card2">
+                <div class="card-icon"><i class="fas fa-wave-square"></i></div>
+                <h2>Wave Particles</h2>
+                <p>Real-time particle system with mouse interaction</p>
+                <div class="particle-demo"></div>
+            </div>
+            
+            <div class="card" id="card3">
+                <div class="card-icon"><i class="fas fa-palette"></i></div>
+                <h2>Color Morphing</h2>
+                <p>Dynamic gradient background with color cycling</p>
+                <div class="color-cycle"></div>
+            </div>
+        </div>
+        
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <button class="btn" id="toggleAnim">
+                <i class="fas fa-play"></i> Toggle Animations
+            </button>
+            <button class="btn" id="changeTheme">
+                <i class="fas fa-moon"></i> Change Theme
+            </button>
+            <button class="btn" id="explodeBtn">
+                <i class="fas fa-fire"></i> Particle Explosion
+            </button>
+        </div>
+        
+        <!-- Animation Stats -->
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-value" id="fps">60</span>
+                <span class="stat-label">FPS</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="particles">0</span>
+                <span class="stat-label">Particles</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="time">0</span>
+                <span class="stat-label">Seconds</span>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Deployed on <strong>PivoCloud</strong> | PORT: <span id="portDisplay">8080</span></p>
+            <p class="pivo-note">This app listens on the PORT environment variable as required</p>
+        </footer>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
